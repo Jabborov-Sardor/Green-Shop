@@ -20,7 +20,6 @@ export interface ProductType {
     tags?:string[]
 }
 
-
 const Products = () => {
     const {category, tags, minPrice, maxPrice,token}:any = useContext(Context)
 
@@ -47,6 +46,6 @@ const Products = () => {
         {isLoading ? "Loading..." : products.map((item:ProductType) => <ProductCard key={item.product_id} item={item}/>)}
     </div>
   )
-}
+}   
 
 export default Products
